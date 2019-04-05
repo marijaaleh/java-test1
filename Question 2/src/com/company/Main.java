@@ -4,15 +4,17 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static <inQ> void main(String[] args) {
        /* The potential clients are now piling in, and it is becoming painfully obvious, that the rented room will soon become too small, as it can only house 100 people. It would be impolite from us to turn people away, so let's make a program that does the dirty work for us.
 
         Create an appliction that:
 
         reads as input: the amount of people in the room
         reads as input: the amount of people still in the queue
-        prints if every person in the queue can fit in the room*/
+        prints if every person in the queue can fit in the room */
 
+
+        int i;
         Scanner sca = new Scanner(System.in);
 
         System.out.println("How many people are there in the room right now?");
@@ -23,6 +25,17 @@ public class Main {
 
         if ((inR+inQ)<=100){
             System.out.println("The queueing " + inQ + " people can come in");
+            //extra
+           for (i=0; i<inQ; i++){
+                System.out.println(" will fit");
+
+           }
         }
+        else {
+            for (i=0;i<inQ;i++){
+                System.out.println(" won't fit");
+            }
+        }
+
     }
 }
